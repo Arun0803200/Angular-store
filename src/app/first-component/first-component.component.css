@@ -1,0 +1,519 @@
+.slider-container {
+  position: relative;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  height: 450px; /* Adjust as needed */
+  position: relative;
+  padding: 15px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+  background-color: green;
+}
+
+.des-head {
+  margin-top: 80px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 80px; 
+  left: 40px;
+  width: 50%;
+  padding: 5px;
+}
+.item {
+  padding: 10px;
+}
+
+.item-2 {
+  padding: 10px;
+  float: left;
+  flex: 0 0 100px;
+}
+
+.item-3 {
+  padding: 10px;
+  float: left;
+  flex: 0 0 100px;
+  margin-top: -50px;
+}
+/* Brands Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 12px;
+  grid-gap: 0px; /* Adjust spacing between grid items */
+  margin: 0 auto; /* Center the container horizontally */
+  border-color: #969595;
+}
+
+.grid-item {
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Feature product menu */
+
+.topnav {
+  height: 30px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  margin: 0px 5px;
+}
+
+.topnav a.home{
+  float: left;
+  color: #969595;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.right {
+  float: right;
+  color:  #969595;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gt {
+  background-color: rgb(0, 167, 0);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  color: white;
+  border-radius: 5%;
+  padding: 0px 2px;
+  font-size: 15px;
+  transform: skewX(-10deg);
+  display: inline-block;
+  transform-origin: bottom right;
+}
+
+.lt {
+  background-color: rgb(0, 167, 0);
+  margin-right: 5px;
+  margin-bottom: 15px;
+  color: white;
+  border-radius: 5%;
+  padding: 0px 2px;
+  font-size: 15px;
+  transform: skewX(-10deg);
+  display: inline-block;
+  transform-origin: bottom right;
+}
+
+.all {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5%;
+  padding: 0px 2px;
+  font-size: 15px;
+  transform: skewX(-10deg);
+  display: inline-block;
+  transform-origin: bottom right;
+}
+
+.all a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.lt a:hover {
+  background-color: rgb(0, 167, 0);
+  color: white;
+}
+
+.gt a:hover {
+  background-color: rgb(0, 167, 0);
+  color: white;
+}
+
+/* Feature Products */
+.feature-product {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  grid-auto-rows: minmax(auto, 1fr);
+  grid-gap: 20px;
+  width: 99%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.feature-grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #969595; /* Add border */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+}
+
+.sku {
+  font-weight: 500;
+  color: #969595;
+  text-align: left;
+}
+
+.name {
+  font-weight: 500;
+  text-align: left;
+}
+
+/* For generate Star */
+.fa.fa-star {
+  font-size: 1.5em; /* Adjust the font size as needed */
+  color: gray; /* Default color */
+}
+
+.fa.fa-star.checked {
+  color: orange;
+}
+
+.start {
+  text-align: left;
+  margin-top: -9px;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px; /* Push the price to the bottom */
+}
+/* Cart 20 */
+.cart-20 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.view {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.hot {
+  background-color: rgb(87, 1, 145);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  color: white;
+  border-radius: 5%;
+  padding: 0px 2px;
+  width: 40px;
+  height: 22px;
+  font-size: 15px;
+  transform: skewX(-10deg);
+  display: inline-block;
+  transform-origin: bottom right;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* Banner Properties */
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  grid-gap: 20px;
+  width: 99%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.banner-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.banner-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust the width as needed */
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.overlay-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+/* Table */
+.product-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 15px;
+  margin-top: -185px;
+}
+
+.product-title > div {
+  border-bottom: 1px solid #dadada; /* Add bottom border to each grid item */
+}
+
+.left-align-bottom {
+  text-align: left;
+}
+
+/* Products */
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 15px;
+}
+
+.top-rader-pdct {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); /* Use repeat for multiple rows */
+  grid-gap: 20px;
+  padding: 15px;
+}
+
+.products-datas {
+  display: grid;
+  grid-template-columns: 30% 65%;
+  border: 1px solid #969595; /* Add border to each div */
+  padding: 10px;
+}
+
+.rat-view {
+  position: absolute;
+  top: 10;
+  right: 935px;
+  width: 15px;
+  height: 15px;
+  color: #696969;
+  filter: grayscale(200%);
+}
+
+.spe-view {
+  position: absolute;
+  top: 10;
+  right: 485px;
+  width: 15px;
+  height: 15px;
+  color: #696969;
+  filter: grayscale(200%);
+}
+
+.bst-view {
+  position: absolute;
+  top: 10;
+  right: 40px;
+  width: 15px;
+  height: 15px;
+  color: #696969;
+  filter: grayscale(200%);
+}
+
+.logo {
+  display: grid;
+  justify-content: space-around;
+  align-items: center; /* Center vertically */
+  justify-items: center; /* Center horizontally */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, 1fr); /* Adjust the height as needed */
+  margin: 0 auto;
+}
+
+.logo-details {
+  display: grid;
+  grid-template-columns: 40% 80%;
+}
+
+/* Footer */
+.bottomnav {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  margin: 0px 0px;
+  position: relative;
+}
+
+.alls,
+.left {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  transform-origin: bottom;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alls {
+  transform: skewX(30deg);
+}
+
+.left {
+  transform: skewX(-30deg);
+}
+
+/* Your existing styles here */
+
+.footer {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding: 50px;
+  justify-items: center; /* Add this line to horizontally center items */
+}
+
+.contact {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  justify-items: center; /* Add this line to horizontally center items */
+}
+
+.contact-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Styles for the input's placeholder */
+input::placeholder {
+  color: white;
+  font-weight: 500;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust as needed */
+}
+
+.social .fa {
+  font-size: 16px; /* Adjust as needed */
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social .fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook { background: #3B5998; }
+.fa-twitter { background: #55ACEE; }
+.fa-youtube { background: #bb0000; }
+.fa-instagram { background: #125688; }
+.fa-rss { background: #ff6600; }
+
+.bottom-footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-content {
+  text-align: left;
+}
+
+.colored-text {
+  color: white;
+}
+
+.footer-image img {
+  max-height: 60px;
+}
+

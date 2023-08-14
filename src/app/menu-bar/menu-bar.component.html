@@ -1,0 +1,131 @@
+<div class="topnav">
+  <a class="home">About Us</a>
+  <a class="home">Contacts</a>
+  <a class="home">Store Location</a>
+  <a class="home">Track Order</a>
+  <a class="home">Blog</a>
+  <a class="right">Language: <select class="dropdown" onchange="this.style.border = 'none';">
+    <option>ENG</option>
+    <option>TAMIL</option>
+  </select></a>
+  <a class="right">Currency: <select class="dropdown" onchange="this.style.border = 'none';">
+    <option style="font-size: 13px; font-weight: 500;">RS</option>
+    <option style="font-size: 13px; font-weight: 500;">USD</option>
+  </select></a>
+  <a class="right">Compare: <b>2</b></a>
+</div>
+<!-- Create Second menu bar -->
+<div class="sec-topnav">
+  <a class="home">
+    <img src="../../assets/logo.png" width="119" height="40">
+  </a>
+  <div>
+    <a class="home" id="vechile">
+      <img src="../../assets/car.svg" width="23" height="23">  Select Vehicle <img src="../../assets/upAndDown.png" width="20" height="20">
+    </a>
+  </div>
+  <div>
+    <a class="home" style="display: inline-block; position: relative;">
+      <input type="search" placeholder="Enter Keyword or Part Number" style="width: 150%; height: 33px; border: none; background-color: #e6e6e6; outline: none; padding-right: 35px;">
+      <img style="position: absolute; top: 50%; right: -70px; transform: translateY(-50%); cursor: pointer;" src="../../assets/search.svg">
+    </a>
+  </div>
+  <div class="right">
+    <div class="right cart-container">
+        <span class="cart-data" style="color: #969595;">Shopping Cart</span><br>
+        <span class="cart-data1"><p style="font-size: 20px;">₹2000</p></span>
+    </div>
+    <div class="right cart-notification-container">
+      <a class="right">
+        <img src="../../assets/cart.svg" width="33" height="33">
+        <span class="cart-notification-count">5</span>
+      </a>
+    </div>
+  </div>
+  <div class="right person-container">
+    <a class="right" id="person">
+      <img src="../../assets/person.svg" width="33" height="33">
+      <span class="person-data" style="color: #969595;">Hello, Login</span><br>
+      <span class="person-data1"><p style="font-size: 20px;">My Account</p></span>
+    </a>
+  </div>
+  <div class="right notification-container">
+    <a class="right">
+      <img src="../../assets/heart.svg" width="33" height="33">
+      <span class="notification-count">5</span>
+    </a>
+  </div>
+</div>
+<hr>
+<!-- Create third menu bar -->
+<div class="third-topnav">
+  <a class="home bar">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Shop By Category</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">
+    <div class="vertical-line"></div>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Shop By Category</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Home</option>
+      <option>page 1</option>
+      <option>page 2</option>
+    </select>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Megamenu</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Shop</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Blog</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Account</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">
+    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+      <option disabled selected>Pages</option>
+      <option>Electronic</option>
+      <option>Shirts</option>
+    </select>
+  </a>
+  <a class="home">Buy Theam</a>
+
+  <a class="third-right">Call Us: <b style="color: black;">097342365443</b></a>
+</div>
+<hr>
+<router-outlet></router-outlet>
