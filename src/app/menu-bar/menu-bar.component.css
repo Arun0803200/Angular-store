@@ -1,0 +1,239 @@
+.topnav {
+    height: 30px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 5px;
+  }
+  
+  .topnav a.home{
+    float: left;
+    color: #969595;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .topnav a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
+  .right {
+    float: right;
+    color:  #969595;
+    margin-right: 5px;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .dropdown {
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #969595;
+    outline: none; /* Remove the default focus outline */
+  }
+
+  /* Second Menu */
+
+  .sec-topnav {
+    height: 50px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 5px;
+  }
+  
+  .sec-topnav a.home{
+    float: left;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .sec-topnav a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
+  .sec-topnav .right {
+    float: right;
+    color:  #000000;
+    margin-right: 10;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* double vechile triangle */
+  #vechile {
+    margin-top: 5px;
+    margin-left: 25px;
+    background-color: rgb(245, 241, 3);
+    color: black;
+  }
+  
+  /* heart notification */
+  .notification-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    background-color: rgb(128, 255, 128);
+    color: white;
+    border-radius: 5%;
+    padding: 0px 4px;
+    font-size: 15px;
+    transform: skewX(-10deg);
+    display: inline-block;
+    transform-origin: bottom right;
+  }
+
+  #person {
+    margin-right: 107px;
+  }
+
+  .cart {
+    margin-right: 146px;
+  }
+
+  .person-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .person-data {
+    position: absolute;
+    top: 5px;
+    left: 50px;
+  }
+
+  .person-data1 {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+  }
+
+  .cart-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  #cart {
+    margin-right: 5px;
+  }
+
+  .cart-data {
+    position: absolute;
+    top: 5px;
+    left: -77px;
+  }
+
+  .cart-data1 {
+    position: absolute;
+    top: 25px;
+    left: -77px;
+  }
+  
+  .cart-notification-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 70px;
+  }
+  
+  .cart-notification-count {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background-color: rgb(128, 255, 128);
+    color: white;
+    border-radius: 5%;
+    padding: 0px 2px;
+    font-size: 15px;
+    transform: skewX(-10deg);
+    display: inline-block;
+    transform-origin: bottom right;
+  }
+
+  .cart {
+    margin-right: 5px;
+  }
+
+  /* Thirt menu bar */
+
+  .third-topnav {
+    height: 30px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 5px;
+  }
+  
+  .third-topnav a.home{
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .third-topnav a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
+  .third-right {
+    float: right;
+    color:  #969595;
+    margin-right: 5px;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .bar1, .bar2 {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
+  .bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
+  .bar {
+    margin-top: -6px;
+  }
+
+  .third-dropdown {
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    outline: none; /* Remove the default focus outline */
+  }
+
+  .vertical-line {
+    width: 1px; /* Adjust the width of the line */
+    height: 1000px; /* Adjust the height of the line */
+    background-color: rgb(136, 136, 136); /* Line color */
+  }
