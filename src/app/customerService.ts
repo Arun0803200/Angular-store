@@ -20,44 +20,6 @@ export class StudentsService {
     queryParam = queryParam.append('universityName', universityValue);
     return this.http.get("http://localhost:3000/api/admin-user", {params: queryParam});
   }
-  // user start...
-
-  getBestProduct() {
-    return this.http.get("http://localhost:3000/api/best");
-  }
-
-  getSpecialOffers() {
-    return this.http.get("http://localhost:3000/api/special");
-  }
-
-  getTopRatedProduct() {
-    return this.http.get("http://localhost:3000/api/rated");
-  }
-
-  getFeatureProduct() {
-    return this.http.get("http://localhost:3000/api/feature");
-  }
-
-  getBanner() {
-    return this.http.get("http://localhost:3000/api/banner");
-  }
-
-  getBrand() {
-    return this.http.get("http://localhost:3000/api/brand");
-  }
-
-  getCategory() {
-    return this.http.get("http://localhost:3000/api/category");
-  }
-
-  getCurrency() {
-    return this.http.get("http://localhost:3000/api/currency");
-  }
-
-  getLanguage() {
-    return this.http.get("http://localhost:3000/api/language");
-  }
-  // user end
 
   detail(id: string) {
     return this.http.get("http://localhost:3000/api/admin-user/"+id);

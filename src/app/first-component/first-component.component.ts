@@ -15,8 +15,89 @@ images: string[] = ["../../assets/slide-1.jpeg"]; // Update with your image URLs
 imgArr = [1,2,3]
 currentImageIndex: number = 0;
 
+banner: any;
+brand: any;
+topRatedProduct: any;
+featureProduct: any;
+specialOffers: any;
+Bestsellers: any;
+
 ngOnInit() {
   this.startImageRotation();
+  this.getBanner();
+  this.getBrand();
+  this.getTopRatedProduct();
+  this.getFeatureProduct();
+  this.getSpecialOffers();
+  this.getBestProduct();
+}
+
+getBestProduct() {
+  this.userService.getBestProduct().subscribe(data => {
+    const value: any = data;
+    this.Bestsellers = value.data.map((value: any) => {
+      const temp: any = value;
+      temp.image = `../../assets/${temp.image}`;
+      return temp;
+    });
+  });
+}
+
+getSpecialOffers() {
+  this.userService.getSpecialOffers().subscribe(data => {
+    const value: any = data;
+    this.specialOffers = value.data.map((value: any) => {
+      const temp: any = value;
+      temp.image = `../../assets/${temp.image}`;
+      return temp;
+    });
+  });
+}
+
+getTopRatedProduct() {
+  this.userService.getTopRatedProduct().subscribe(data => {
+    const value: any = data;
+    this.topRatedProduct = value.data.map((value: any) => {
+      const temp: any = value;
+      temp.image = `../../assets/${temp.image}`;
+      return temp;
+    });
+  });
+}
+
+getFeatureProduct() {
+  this.userService.getFeatureProduct().subscribe(data => {
+    const value: any = data;
+    this.featureProduct = value.data.map((value: any) => {
+      const temp: any = value;
+      temp.image = `../../assets/${value.image}`;
+      return temp;
+    });
+  });
+}
+
+getBanner() {
+  this.userService.getBanner().subscribe(data => {
+    const value: any = data;
+    this.banner = value.data.map((value: any) => {
+      const temp: any = value;
+      temp.image = `../../assets/${temp.image}`;
+      return temp;
+    });
+  });
+}
+
+getBrand() {
+  this.userService.getBrand().subscribe(data => {
+    const value: any = data;
+    this.brand = value.data.map((value: any) => {
+      const temp: any = {};
+      temp.image = `../../assets/${value.image}`;
+      temp.brandName = value.name
+      return temp;
+    });;
+    console.log(this.banner, 'banner')
+  });
 }
 
 startImageRotation() {
@@ -33,198 +114,6 @@ changeImage(index: number) {
   this.currentImageIndex = index;
 }
 
-spar = [{
-  image: '../../assets/brand-1.png',
-  brandName: 'AIMPARTS'
-},
-{
-  image: '../../assets/brand-2.png',
-  brandName: 'WINGINGINE'
-},
-{
-  image: '../../assets/brand-3.png',
-  brandName: 'TURBOELECTRONIC'
-},
-{
-  image: '../../assets/brand-4.png',
-  brandName: 'STARTONE'
-},
-{
-  image: '../../assets/brand-5.png',
-  brandName: 'BRANDIX'
-},
-{
-  image: '../../assets/brand-6.png',
-  brandName: 'ABS-BRAND'
-},
-{
-  image: '../../assets/brand-7.png',
-  brandName: 'GREATCIRCLE'
-},
-{
-  image: '../../assets/brand-8.png',
-  brandName: 'JUSTROMB'
-},
-{
-  image: '../../assets/brand-9.png',
-  brandName: 'FASTWHEELS'
-},
-{
-  image: '../../assets/brand-10.png',
-  brandName: 'STROYKS-X'
-},
-{
-  image: '../../assets/brand-11.png',
-  brandName: 'MISSION-51'
-},
-{
-  image: '../../assets/brand-12.png',
-  brandName: 'FUELCORP'
-},
-{
-  image: '../../assets/brand-13.png',
-  brandName: 'REDGATE'
-},
-{
-  image: '../../assets/brand-14.png',
-  brandName: 'BLOCKS'
-},
-{
-  image: '../../assets/brand-15.png',
-  brandName: 'BLACKBOX'
-},
-{
-  image: '../../assets/brand-16.png',
-  brandName: 'SQUAERGARRAGE'
-}];
-
-featureProduct = [
-  {
-    image: '../../assets/product-1.jpeg',
-    productName: `Glossy Gray 19' Aluminium Whell AR-19`,
-    sku: 'A43-44328-B',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 26,
-    price: '598.00',
-    isHot: 1
-  },
-  {
-    image: '../../assets/product-2.jpeg',
-    productName: 'Twin Exhaust Pipe From Brandix Z54',
-    sku: '729-51203-B',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 9,
-    price: '749.00',
-    isHot: 0
-  },
-  {
-    image: '../../assets/product-3.jpeg',
-    productName: 'Motor Oil Level 5',
-    sku: '573-49386-C',
-    ratting: [1,1,1,1,1],
-    reviewCounts: 2,
-    price: '23.00',
-    isHot: 0
-  },
-  {
-    image: '../../assets/product-4.jpeg',
-    productName: 'Brandix Engine Block Z4',
-    sku: '753-38573-B',
-    ratting: [0,0,0,0,0],
-    reviewCounts: 0,
-    price: '452.00',
-    isHot: 0
-  },
-  {
-    image: '../../assets/product-5.jpeg',
-    productName: 'Brandix Cluth Discs Z175',
-    sku: '472-67382-Z',
-    ratting: [1,1,1,0,0],
-    reviewCounts: 7,
-    price: '345.00',
-    isHot: 0
-  }
-]
-
-topRatedProduct = [
-  {
-    image: '../../assets/product-6.jpeg',
-    productName: 'Fantastic 12-Stroke Engine With A Power of 1991 hp',
-    ratting: [1,1,1,0,0],
-    reviewCounts: 17,
-    price: '2579.00',
-    stickOutPrice: ''
-  },
-  {
-    image: '../../assets/product-7.jpeg',
-    productName: 'Set of Four 19 Inch Spiked Tires',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 9,
-    price: '327.00',
-    stickOutPrice: ''
-  },
-  {
-    image: '../../assets/product-8.jpeg',
-    productName: '40 Megawatt Low Beam Lamp',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 31,
-    price: '4.00',
-    stickOutPrice: '8.00' 
-  }
-]
-
-specialOffers = [
-  {
-    image: '../../assets/product-9.jpeg',
-    productName: 'Brandix Manual Five Speed Gearbox',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 6,
-    price: '879.00',
-    stickOutPrice: ''
-  },
-  {
-    image: '../../assets/product-10.jpeg',
-    productName: 'Set of Car Floor Mats Brandix Z4',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 16,
-    price: '78.00',
-    stickOutPrice: '94.00'
-  },
-  {
-    image: '../../assets/product-11.jpeg',
-    productName: 'Taillights Brandix Z54',
-    ratting: [1,1,0,0,0],
-    reviewCounts: 31,
-    price: '60.00',
-    stickOutPrice: '' 
-  }
-]
-
-Bestsellers = [
-  {
-    image: '../../assets/product-4.jpeg',
-    productName: 'Brandix Engine Block Z4',
-    ratting: [0,0,0,0,0],
-    reviewCounts: 0,
-    price: '452.00',
-    stickOutPrice: '573.00'  },
-  {
-    image: '../../assets/product-5.jpeg',
-    productName: 'Brandix Cluth Discs Z175',
-    ratting: [1,1,1,0,0],
-    reviewCounts: 7,
-    price: '345.00',
-    stickOutPrice: ''
-  },
-  {
-    image: '../../assets/product-9.jpeg',
-    productName: 'Brandix Manual Five Speed Gearbox',
-    ratting: [1,1,1,1,0],
-    reviewCounts: 6,
-    price: '879.00',
-    stickOutPrice: ''
-  }
-]
 logo = [
   {
     image: '../../assets/svg/free-delivery.svg',
