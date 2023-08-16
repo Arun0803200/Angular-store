@@ -5,14 +5,14 @@
   <a class="home">Track Order</a>
   <a class="home">Blog</a>
   <a class="right">Language: <select class="dropdown" onchange="this.style.border = 'none';">
-    <option>ENG</option>
-    <option>TAMIL</option>
+    <option *ngFor="let data of language">{{data.languageCode}}</option>
   </select></a>
-  <a class="right">Currency: <select class="dropdown" onchange="this.style.border = 'none';">
-    <option style="font-size: 13px; font-weight: 500;">RS</option>
-    <option style="font-size: 13px; font-weight: 500;">USD</option>
-  </select></a>
-  <a class="right">Compare: <b>2</b></a>
+  <a class="right">Currency:
+    <select class="dropdown">
+      <option *ngFor="let data of currency">{{data.currencyCode}}</option>
+    </select>
+  </a>
+  <a class="right">Compare: <span style="color: black; font-weight: 580;">2</span></a>
 </div>
 <!-- Create Second menu bar -->
 <div class="sec-topnav">
@@ -65,10 +65,9 @@
     <div class="bar3"></div>
   </a>
   <a class="home">
-    <select select class="third-dropdown" onchange="this.style.border = 'none';">
+    <select class="third-dropdown">
       <option disabled selected>Shop By Category</option>
-      <option>Electronic</option>
-      <option>Shirts</option>
+      <option *ngFor="let data of category">{{ data.name }}</option>
     </select>
   </a>
   <a class="home">

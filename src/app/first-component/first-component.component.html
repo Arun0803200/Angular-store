@@ -25,7 +25,7 @@
 </div>
 <!-- Brands Grid -->
 <div class="grid-container">
-  <div class="grid-item" *ngFor="let data of spar">
+  <div class="grid-item" *ngFor="let data of brand">
     <img src="{{ data.image }}" style="width: 70px; height: 70px; filter: grayscale(100%);"><br>
     <h5 style="font-weight: 500; color: #969595;">{{data.brandName}}</h5>
   </div>
@@ -70,22 +70,22 @@
 <!-- Banner -->
 
 <div class="banner">
-  <div class="banner-image">
-    <div class="overlay" style="background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(0, 0, 0)); height: 220px; margin-bottom: 200;">
-      <h3 style="color: gold; font-size: 20px; font-weight: 700; text-align: left; margin-top: -100px; margin-left: 10px;" class="overlay-text">MOTOR OILS</h3>
-      <h5 style="color: white; font-weight: 500; text-align: left; margin-top: -10px; margin-left: -305px;">Synthetic motor oil with free shipping <br> Friction free life guaranteed</h5>
+  <div *ngFor="let bannerdata of banner" class="banner-image">
+    <div class="overlay">
+      <h3 style="color: gold; font-size: 20px; font-weight: 700; text-align: left; margin-top: -100px; margin-left: 10px;" class="overlay-text">{{bannerdata.title}}</h3>
+      <h5 [innerHTML]="bannerdata.descriptions" style="color: white; font-weight: 500; text-align: left; margin-top: -10px; margin-left: -305px;"></h5>
       <button type="button" class="btn btn-danger" style="margin-left: -203px; margin-top: 60px; width: 80px; height: 25px; font-size: 11px; line-height: 1;">Shop Now</button>
     </div>
-    <img src="../../assets/banner1.jpeg">
+    <img src="{{bannerdata.image}}">
   </div>
-  <div class="banner-image">
+  <!-- <div class="banner-image">
     <div class="overlay" style="background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(0, 0, 0)); height: 220px; margin-bottom: 200;">
       <h3 style="color: gold; font-size: 20px; font-weight: 700; text-align: left; margin-top: -100px; margin-left: 10px;" class="overlay-text">SAVE UP TO $40</h3>
       <h5 style="color: white; font-weight: 500; text-align: left; margin-top: -10px; margin-left: -305px;">Luxurious interior part for real aesthetes <br> Leather, fabric, ivory and more.</h5>
       <button type="button" class="btn btn-danger" style="margin-left: -220px; margin-top: 60px; width: 80px; height: 25px; font-size: 11px; line-height: 1;">Shop Now</button>
     </div>
     <img src="../../assets/banner2.jpeg">
-  </div>
+  </div> -->
 </div>
 
 <!-- Products Title -->
@@ -140,7 +140,7 @@
         <img src="{{data.image}}" height="100" width="100">
       </div>
       <div class="details">
-        <img class="spe-view" style="color: #696969; filter: grayscale(200%);" src="../../assets/quickview.svg" alt="Add to Cart">
+        <img class="rat-view" style="color: #696969; filter: grayscale(200%);" src="../../assets/quickview.svg" alt="Add to Cart">
         <h4 style="font-weight: 500;">{{data.productName}}</h4>
         <div class="start">
           <span class="fa fa-star {{data.ratting[0] === 1 ? 'checked' : ''}}"></span>
@@ -169,7 +169,7 @@
         <img src="{{data.image}}" height="100" width="100">
       </div>
       <div class="details">
-        <img class="bst-view" style="color: #696969; filter: grayscale(200%);" src="../../assets/quickview.svg" alt="Add to Cart">
+        <img class="rat-view" src="../../assets/quickview.svg" alt="Add to Cart">
         <h4 style="font-weight: 500;">{{data.productName}}</h4>
         <div class="start">
           <span class="fa fa-star {{data.ratting[0] === 1 ? 'checked' : ''}}"></span>

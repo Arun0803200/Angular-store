@@ -34,10 +34,12 @@
   .dropdown {
     border: none;
     font-size: 13px;
-    font-weight: 500;
-    color: #969595;
-    outline: none; /* Remove the default focus outline */
-  }
+    font-weight: 550;
+    color: black;
+    outline: none;
+    background-color: white;
+    /* Add any other relevant styles for the 'dropdown' class */
+}
 
   /* Second Menu */
 
@@ -229,6 +231,7 @@
     font-size: 13px;
     font-weight: 500;
     color: #000000;
+    background-color: white;
     outline: none; /* Remove the default focus outline */
   }
 
